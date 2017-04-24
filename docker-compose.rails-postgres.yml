@@ -1,0 +1,19 @@
+version: '2'
+
+services: 
+  db_dev:
+    image: postgres
+    environment:
+      - POSTGRES_USER=rails_app_user
+      - POSTGRES_PASSWORD=rails_app_password
+      - POSTGRES_DB=rails_app
+    ports:
+      - "5432:5432"
+  db_test:
+    image: postgres
+    environment:
+      - POSTGRES_USER=rails_app_user
+      - POSTGRES_PASSWORD=rails_app_password
+      - POSTGRES_DB=rails_app
+    ports: 
+      - "5433:5432"
